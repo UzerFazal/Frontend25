@@ -1,0 +1,266 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f3f4;
+    color: #202124;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .container {
+    max-width: 480px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 30px 24px;
+    margin-top: 40px;
+    border-radius: 16px;
+    box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Headings */
+  h1 {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  
+  h3 {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  
+  /* Tab Navigation */
+  .tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  
+  .tab-buttons button {
+    padding: 10px 18px;
+    border-radius: 10px;
+    background-color: #e8f0fe;
+    color: #1a73e8;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .tab-buttons button.active {
+    background-color: #1a73e8;
+    color: white;
+  }
+  
+  /* Forms and inputs */
+  form {
+    margin-top: 16px;
+    text-align: center;
+  }
+  
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 12px 14px;
+    margin: 10px 0;
+    border: 1px solid #dadce0;
+    border-radius: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  /* Modern calendar icon */
+  input[type="date"],
+  input[type="datetime-local"] {
+    appearance: none;
+    -webkit-appearance: none;
+    background: url('https://www.svgrepo.com/show/354262/calendar.svg') no-repeat right 12px center;
+    background-size: 20px;
+    padding-right: 36px;
+    cursor: pointer;
+  }
+  
+  /* Buttons */
+  button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #1a73e8;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 6px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #1666c1;
+  }
+  
+  /* Task and Project Cards */
+  .task-item,
+  .project-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
+  
+  .task-item.completed {
+    text-decoration: line-through;
+    color: #9e9e9e;
+  }
+  
+  /* Task Buttons */
+  .task-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  
+  /* Modal */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 28px 20px;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 460px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    position: relative;
+  }
+  
+  .modal-content h2 {
+    margin-bottom: 16px;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 22px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #999;
+  }
+  
+  /* Floating Button */
+  .floating-button {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    background-color: #1a73e8;
+    color: white;
+    font-size: 28px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Utility */
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  /* DateTime Badge — also used in projects */
+  .datetime-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid #dadce0;
+    border-radius: 20px;
+    background-color: #f1f3f4;
+    color: #1a73e8;
+    font-weight: 500;
+    font-size: 13px;
+    margin: 8px auto;
+    cursor: default;
+    user-select: none;
+  }
+  
+  .datetime-badge.overdue {
+    background-color: #fdecea;
+    color: #d93025;
+  }
+  
+  .project-date {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: #f1f3f4;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #1a73e8;
+    font-weight: 500;
+    margin: 8px auto;
+  }
+  
+  /* Project info spacing */
+  .project-item h3 {
+    margin-bottom: 6px;
+    font-size: 18px;
+  }
+  
+  .project-item p {
+    margin: 4px 0;
+  }
+  
+  .select-wrapper {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #ff5252;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    font-weight: 500;
+  }
+  .project-item.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+  }
+  
+  .project-item.completed h3::after {
+    content: ' ✅';
+  }
+  
